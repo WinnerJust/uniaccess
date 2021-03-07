@@ -70,10 +70,10 @@ Primary methods that you will use have the following signatures:
 
 ```cpp
 class User {
-	public:
-		void goToRoom(Room* room);
-		virtual void allowUser(User* user, Room* room);
-		virtual void forbidUser(User* user, Room* room);
+public:
+	void goToRoom(Room* room);
+	virtual void allowUser(User* user, Room* room);
+	virtual void forbidUser(User* user, Room* room);
 }
 ```
 
