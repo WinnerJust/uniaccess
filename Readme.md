@@ -14,6 +14,8 @@ Any of the abovementioned is easily expandable.
 
 ## Installation
 
+You will need to build the program from source code.
+
 In order to run the program you need to provide two databases:
 
 1. User database (you can replace the default one named `database.txt` consisting of 60 users)
@@ -63,6 +65,17 @@ Rooms::initialize();
 ```
 
 Now the Access System is ready to use.
+
+Primary methods that you will use have the following signatures:
+
+```cpp
+class User {
+	public:
+		void goToRoom(Room* room);
+		virtual void allowUser(User* user, Room* room);
+		virtual void forbidUser(User* user, Room* room);
+}
+```
 
 ## Other information
 
