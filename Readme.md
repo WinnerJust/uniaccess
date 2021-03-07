@@ -70,15 +70,27 @@ Primary methods that you will use have the following signatures:
 
 ```cpp
 class User {
-public:
-	void goToRoom(Room* room);
-	virtual void allowUser(User* user, Room* room);
-	virtual void forbidUser(User* user, Room* room);
+	public:
+		void goToRoom(Room* room);
+		virtual void allowUser(User* user, Room* room);
+		virtual void forbidUser(User* user, Room* room);
 }
 ```
+
+### goToRoom(room)
+
+User tries to open a room. Uses Access System's method that checks permission of this user to open the room based on `accessLevel` of the room, `accessibleLevel` of the user, list of banned  users from this room and users with custom access to this room (whitelist).
+
+### allowUser(user, room)
+
+Adds user to whitelist and removes from banlist of a specific room.
+
+### forbidUser(user, room)
+
+Adds user to banlist and removes from whitelist of a specific room.
 
 ## Other information
 
 This is not stable release of a program. You are running this program at your own risk.
 
-Copyright 2021. All rights reserved.
+Copyright © 2021. All rights reserved.
